@@ -1,7 +1,7 @@
 <template>
   <q-page padding class="flex flex-center row">
     <div class="row col-12">
-      <q-card bordered class="my-card bg-orange-1 offset-1 col-10">
+      <q-card bordered class="my-card bg-gray-1 offset-1 col-10">
       <q-card-section>
         <div class="row items-center no-wrap">
           <div class="col-12">
@@ -59,9 +59,12 @@ export default {
     createUser () {
       this.$axios
         .post('http://localhost:3000/usuarios', this.novoUsuario)
-        .then(response => {
-          console.log(response.data)
-        })
+        .then(
+          this.$q.notify({
+            message: 'Cadastrado com sucesso',
+            color: 'positive'
+          }),
+          this.$router.push('/'))
     }
   }
 }

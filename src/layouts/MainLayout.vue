@@ -58,8 +58,8 @@ const linksData = [
   },
   {
     title: 'Atribuidas',
-    caption: 'Atividades Para Mim',
-    icon: 'person_pin',
+    caption: 'Atividades Atribuidas',
+    icon: 'fact_check',
     link: '/atividades-atribuidas'
   }
 ]
